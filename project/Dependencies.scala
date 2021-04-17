@@ -20,7 +20,7 @@ object Dependencies
 
   lazy val pureconfig = "com.github.pureconfig" %% "pureconfig" % "0.14.1"
 
-  lazy val flyway = "org.flywaydb" % "flyway-core" % "7.7.2"
+  lazy val flyway = "org.flywaydb" % "flyway-core" % "7.8.1"
 
   lazy val kindProjector = "org.typelevel" %% "kind-projector" % "0.11.3" cross CrossVersion.full
 
