@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+
+  database-benchmarks:
+    image: database-benchmarks:latest
+    depends_on:
+      - postgres
+    environment:
+      DATABASE_URL: "jdbc:postgresql://postgres:5432/database-benchmarks"
+      DATABASE_USER: "admin"
+      DATABASE_PASSWORD: "password"
+
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: "database-benchmarks"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "password"
+

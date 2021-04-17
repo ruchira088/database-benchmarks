@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  connection: local
+
+  tasks:
+    - name: Build production jar files
+      shell: cd ../ && sbt universal:packageZipTarball
+
+    - name: Build production Docker image
+      shell: cd ../ && docker build -t database-benchmarks:latest -f Dockerfile-prod .
+
+    - name: Print finish message
+      debug:
+        msg: Completed building Docker image for database-benchmarks

@@ -1,0 +1,7 @@
+.idea
+.bsp
+.metals
+.vscode
+
+target
+.DS_Store

@@ -1,0 +1,7 @@
+FROM openjdk:11-jre-slim
+
+WORKDIR /opt/database-benchmarks
+
+ADD target/universal/database-benchmarks-*.tgz .
+
+CMD [ "/opt/database-benchmarks/bin/database-benchmarks" ]
